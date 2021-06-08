@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send E-mail</title>
+</head>
+
+<body>
+
+    <button onclick="sendEmail()">Enviar E-mail</button>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                SecureToken: 'b253a383-e09b-44ac-81dc-69e1c23d2ae1',
+                To: 'geverson.loch@abase.com.br',
+                From: 'geversonloch@gmail.com',
+                Subject: 'This is the subject',
+                Body: 'And this is the body'
+            }).then(message => console.info(message));
+        }
+    </script>
+</body>
+
+</html>
